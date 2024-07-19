@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: gr;
+    src: url(jonathan-regular.ttf) ;
+}
+
+@font-face {
+    font-family: is;
+    src: url(Courteous-p7wAD.ttf);
+}
+
+  
+
+* {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    background-color: #f3f3f3;
+    height: 130px;
+}
+
+.pix {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 22px;
+    text-align: center;
+    box-shadow: 1px -2px 8px 0px black;
+}
+
+.pix p {
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding-top: 5px;
+}
+
+.logo {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    top: 30px;
+    left: 38%;
+    text-align: center;
+}
+
+.logo p {
+    font-size: 70px;
+    font-family: gr;
+    position: absolute;
+    left: 48%;
+    top: 10px;
+}
+
+.logo a {
+    position: absolute;
+    font-family: is;
+    top: -9px;
+    left: 30%;
+    font-size: 80px;
+    text-decoration: none;
+    color: black;
+}
+
+.bag {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.bag i {
+    font-size: 25px;
+    color: black;
+}
+
+.user {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+}
+
+.user i {
+    font-size: 25px;
+    color: black;
+}
+
+.cora {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+.cora i {
+    font-size: 25px;
+    color: black;
+}
+
+.map {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+}
+
+.map i{
+    font-size: 25px;
+    color: black;
+}
+
+.frete {
+    position: absolute;
+    top: 130px;
+    background-color: #7E0315;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    
+}
+
+.frete p {
+    color: white;
+    font-size: 13px;
+    font-weight: 800;
+    padding-top: 1px;
+
+}
+
+
+nav {
+    height: 20px;
+    width: 100%;
+    top: 100px;
+    position: absolute;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+nav a {
+    padding-left: 80px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    color: black;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    height: 1000px;
+    background-color: cornflowerblue;
+}
+
+.ft1 {
+    border-radius: 10px;
+    margin-top: 90px;
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+   
+}
+.ft2 {
+    border-radius: 10px;
+    margin-top: 90px;
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+}
+.ft3 {
+    border-radius: 10px;
+    margin-top: 90px;
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+}
+.ft4 {
+    border-radius: 10px;
+    margin-top: 90px;
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+}
+
+.ft1 p {
+    position: absolute;
+    right: 1089px;
+    top: 430px;
+}
+
+.ft2 p {
+    position: absolute;
+    right: 770px;
+    top: 430px;
+}
+
+.ft3 p {
+    position: absolute;
+    right: 455px;
+    top: 430px;
+}
+
+.ft4 p {
+    position: absolute;
+    right: 135px;
+    top: 430px;
+}
