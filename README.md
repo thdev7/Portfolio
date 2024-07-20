@@ -1,4 +1,4 @@
-Alguns projetos feitos por mim.
+Alguns projetos feitos por mim.<br>
 HTML CSS JS
 
 <a href="https://thdev7.github.io/portfolio/e-commerce/index.html">E-commerce</a>
