@@ -18,9 +18,7 @@
 
 
 body{
-    background-color: #474141;
     font-family: 'BK';
-    height: 1000px;
 }
 
 header {
@@ -43,6 +41,7 @@ header {
 }
 
 .logo {
+    z-index: 999;
     margin-left: -70px;
 }
 
@@ -66,4 +65,22 @@ header {
     font-weight: 400;
     text-decoration: none;
     
+}
+
+
+
+
+
+
+
+section{
+    background-color: rgb(216, 38, 38);
+    height: 1000px;
+}
+
+.img-container{
+    width: 100%vw;
+    background-image: url(image/bk1.png);
+    background-size: cover;
+    height: 630px;
 }
