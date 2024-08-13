@@ -5,4 +5,4 @@ HTML CSS JS
 <a href="https://thdev7.github.io/Portfolio/portifolio.red/index.html" target="_blank" rel="external">Sobre mim</a> <br>
 <a href="https://thdev7.github.io/Portfolio/loginpg1/index.html" target="_blank" rel="external">Página de Login</a> <br>
 <a href="https://thdev7.github.io/Portfolio/desafio_android/android.html" target="_blank" rel="external">Projeto Android<a> <br>
-<a href="https://thdev7.github.io/html_css_cursoemvideo/desafios/desafio12/index.html" target="_blank" rel="external">Projeto Cordel</a>
+<a href="https://thdev7.github.io/Portfolio/projeto_cordel/index.html" target="_blank" rel="external">Projeto Cordel</a>
