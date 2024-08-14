@@ -21,10 +21,6 @@ body{
     font-family: 'BK';
 }
 
-header {
-    
-}
-
 
 
 .bannertop {
@@ -73,14 +69,52 @@ header {
 
 
 
-section{
+.sec1{
     background-color: rgb(216, 38, 38);
-    height: 1000px;
+    height: 650px;
+    flex-wrap: wrap;
 }
 
-.img-container{
-    width: 100%vw;
-    background-image: url(image/bk1.png);
-    background-size: cover;
+.swipper {
+    
     height: 630px;
+}
+
+
+
+.swiper-button-next {
+    position: absolute;
+    top: 435px;
+    right: 20px;
+    color: white;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    top: 435px;
+    left: 20px;
+    color: white;
+}
+
+.project-img{
+    width: 100%vw;
+    height: 630px;
+}
+
+.img1 {
+    width: 100%;
+}
+
+.img2 {
+    width: 100%;
+}
+
+.img3 {
+    width: 100%;
+}
+
+.swiper-pagination {
+    margin-top: 10px;
+    position: relative;
+       
 }
