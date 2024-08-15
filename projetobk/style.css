@@ -17,6 +17,7 @@
 }
 
 
+
 body{
     font-family: 'BK';
 }
@@ -120,8 +121,6 @@ body{
 
 .sec2 {
     height: 600px;
-    background-color: aqua;
-    border: 1px solid black;
 }
 
 .img4 {
@@ -146,6 +145,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 20px;
+    padding-bottom: 15px;
 }
 
 .footlist ul li {
@@ -160,11 +160,14 @@ body{
     text-decoration: none;
 }
 
+.footlist ul li a:hover {
+    text-decoration: underline;
+} 
+
 .footlist2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .footlist2 ul li {
@@ -176,9 +179,65 @@ body{
     font-style: normal;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
-    line-height: 16px;
+    line-height: 5px;
     text-align: center;
     color: white;
     padding: 10px;
     text-decoration: none;
+}
+
+.footlist2 ul li a:hover {
+    text-decoration: underline;
+}
+
+.hr {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hr1 {
+    width: 1300px;
+    margin-top: 50px;
+    background-color: white;
+    height: 1px;
+}
+
+.comp {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.comp1 {
+    color: white;
+    font-size: 22px;
+}
+
+.ins {
+    display:flex;
+    justify-content: center;
+    align-items: end;
+    height: 67px;
+}
+
+.ins1 ul li {
+    display: inline;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.dir {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.dir1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: white;
 }
