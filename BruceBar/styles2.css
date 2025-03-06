@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    width: 100%;
+    max-width: 100%;
+}
+
+main {
+    padding: 0; /* Removido o padding para evitar espaços em branco */
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    background: linear-gradient(to bottom, #FF9D23, #FF9D23, #FE3337);
+    padding: 20px 15px; /* Ajuste do padding */
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura */
+}
+
+.search-bar .logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.search-bar input {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+}
+
+/* Categorias */
+.categories {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 10px;
+    margin: 20px 0;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    padding-bottom: 10px; /* Espaço para a barra de rolagem */
+}
+
+.categories button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    flex-shrink: 0; /* Impede que os botões encolham */
+}
+
+.categories button:hover {
+    background: #e65c00;
+}
+
+/* Recomendações */
+.recommendations {
+    margin: 20px 0;
+    text-align: center; /* Centraliza o texto do título */
+}
+
+.recommendations h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.recommendations-grid {
+    display: flex;
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 15px;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    padding-bottom: 10px; /* Espaço para a barra de rolagem */
+}
+
+.recommendations-grid .card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Impede que os cards encolham */
+    width: 200px; /* Largura fixa para cada card */
+}
+
+.recommendations-grid .card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recommendations-grid .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.recommendations-grid .card span {
+    font-weight: bold;
+    color: #ff6600;
+    font-size: 16px;
+}
+
+/* Menu */
+.menu {
+    margin: 20px 0;
+}
+
+.menu h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-grid .card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-grid .card img {
+    width: 70%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-grid .card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.menu-grid .card span {
+    font-weight: bold;
+    color: #ff6600;
+    font-size: 16px;
+}
+
+/* Botão de scroll */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #FF9D23;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
