@@ -41,12 +41,12 @@ main {
 /* Categorias */
 .categories {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinhar à esquerda */
     gap: 10px;
     margin: 20px 0;
-    overflow-x: auto;
-    padding: 0 20px; /* Espaçamento lateral */
-    box-sizing: border-box; /* Garante que o padding seja incluído na largura */
+    overflow-x: auto; /* Rolagem horizontal */
+    padding: 0 20px 10px 20px; /* Espaçamento lateral */
+    scroll-padding: 20px; /* Espaço de rolagem */
 }
 
 .categories button {
@@ -58,7 +58,7 @@ main {
     cursor: pointer;
     font-size: 14px;
     white-space: nowrap;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Impede que os botões encolham */
     min-width: 100px; /* Largura mínima para os botões */
 }
 
