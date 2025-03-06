@@ -13,15 +13,15 @@ body {
 }
 
 main {
-    padding: 0; /* Removido o padding para evitar espaços em branco */
+    padding: 0;
 }
 
 /* Barra de pesquisa */
 .search-bar {
     background: linear-gradient(to bottom, #FF9D23, #FF9D23, #FE3337);
-    padding: 20px 15px; /* Ajuste do padding */
+    padding: 20px 15px;
     text-align: center;
-    width: 100%; /* Ocupa toda a largura */
+    width: 100%;
 }
 
 .search-bar .logo {
@@ -41,11 +41,11 @@ main {
 /* Categorias */
 .categories {
     display: flex;
-    justify-content: center; /* Centraliza os botões */
+    justify-content: center;
     gap: 10px;
     margin: 20px 0;
-    overflow-x: auto; /* Permite rolagem horizontal */
-    padding-bottom: 10px; /* Espaço para a barra de rolagem */
+    overflow-x: auto;
+    padding-bottom: 10px;
 }
 
 .categories button {
@@ -56,8 +56,8 @@ main {
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-    flex-shrink: 0; /* Impede que os botões encolham */
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .categories button:hover {
@@ -67,7 +67,7 @@ main {
 /* Recomendações */
 .recommendations {
     margin: 20px 0;
-    text-align: center; /* Centraliza o texto do título */
+    text-align: center;
 }
 
 .recommendations h2 {
@@ -77,10 +77,10 @@ main {
 
 .recommendations-grid {
     display: flex;
-    justify-content: center; /* Centraliza os cards horizontalmente */
+    justify-content: center;
     gap: 15px;
-    overflow-x: auto; /* Permite rolagem horizontal */
-    padding-bottom: 10px; /* Espaço para a barra de rolagem */
+    overflow-x: auto;
+    padding-bottom: 10px;
 }
 
 .recommendations-grid .card {
@@ -89,12 +89,14 @@ main {
     padding: 15px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Impede que os cards encolham */
-    width: 200px; /* Largura fixa para cada card */
+    flex-shrink: 0;
+    width: 200px;
 }
 
 .recommendations-grid .card img {
-    width: 100%;
+    width: 100%; /* Largura fixa */
+    height: 150px; /* Altura fixa */
+    object-fit: cover; /* Mantém a proporção da imagem */
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -152,16 +154,21 @@ main {
     font-size: 16px;
 }
 
-/* Botão de scroll */
+/* Botão de scroll para o topo */
 .scroll-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #FF9D23;
+    background: #ff6600;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-top:hover {
+    background: #e65c00;
 }
