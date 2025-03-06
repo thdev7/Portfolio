@@ -80,7 +80,8 @@ main {
     justify-content: flex-start; /* Alinhar à esquerda */
     gap: 15px;
     overflow-x: auto;
-    padding: 0 15px 10px 15px; /* Adicionado padding lateral */
+    padding: 0 20px 10px 20px; /* Espaço extra à esquerda e à direita */
+    scroll-padding: 20px; /* Espaço de rolagem */
 }
 
 .recommendations-grid .card {
