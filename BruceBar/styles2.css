@@ -77,10 +77,10 @@ main {
 
 .recommendations-grid {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinhar à esquerda */
     gap: 15px;
     overflow-x: auto;
-    padding-bottom: 10px;
+    padding: 0 15px 10px 15px; /* Adicionado padding lateral */
 }
 
 .recommendations-grid .card {
