@@ -45,19 +45,20 @@ main {
     gap: 10px;
     margin: 20px 0;
     overflow-x: auto;
-    padding-bottom: 10px;
+    padding: 0 20px 10px 20px; /* Espaçamento lateral */
 }
 
 .categories button {
     background: #ff6600;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px; /* Reduzi o padding horizontal */
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
     white-space: nowrap;
     flex-shrink: 0;
+    min-width: 100px; /* Largura mínima para os botões */
 }
 
 .categories button:hover {
@@ -77,7 +78,7 @@ main {
 
 .recommendations-grid {
     display: flex;
-    justify-content: flex-start; /* Alinhar à esquerda */
+    justify-content: flex-start;
     gap: 15px;
     overflow-x: auto;
     padding: 0 20px 10px 20px; /* Espaço extra à esquerda e à direita */
