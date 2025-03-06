@@ -45,14 +45,15 @@ main {
     gap: 10px;
     margin: 20px 0;
     overflow-x: auto;
-    padding: 0 20px 10px 20px; /* Espaçamento lateral */
+    padding: 0 20px; /* Espaçamento lateral */
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura */
 }
 
 .categories button {
     background: #ff6600;
     color: white;
     border: none;
-    padding: 10px 15px; /* Reduzi o padding horizontal */
+    padding: 10px 20px; /* Padding ajustado */
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
@@ -172,5 +173,5 @@ main {
 }
 
 .scroll-top:hover {
-    background: #943b00;
+    background: #e65c00;
 }
