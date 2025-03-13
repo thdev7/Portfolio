@@ -63,7 +63,7 @@ function renderizarProdutos() {
                         <h3>${produto.nome}</h3>
                         <p>${produto.descricao}</p>
                         <p class="preco">R$ ${produto.preco}</p>
-                        <a href="https://api.whatsapp.com/send?phone=${numeroContato}&text=Olá, tenho interesse. ${produto.nome}!" target="_blank">Comprar via WhatsApp</a>
+                        <a href="https://api.whatsapp.com/send?phone=${numeroContato}&text=Olá, tenho interesse. ${produto.nome}!" target="_blank">Pedido via WhatsApp</a>
                     </div>
                 `;
             });
