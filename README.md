@@ -9,5 +9,5 @@ HTML CSS JS
 <a href="https://thdev7.github.io/Portfolio/desafio_android/android.html" target="_blank" rel="external">Projeto Android<a> <br>
 <a href="https://thdev7.github.io/Portfolio/projeto_cordel/index.html" target="_blank" rel="external">Projeto Cordel</a><br>
 <a href="https://thdev7.github.io/Portfolio/verificador_de_idade/index.html" target="_blank" rel="external">Verificador de idade</a> <br>
-<a href="https://thdev7.github.io/Portfolio/tabuada/ex17.html" target="_blank" rel="external">Tabuada com JS</a>
-<a href="https://thdev7.github.io/Portfolio/catalogo/catalogo.html" target="_blank" rel="external">Tabuada com JS</a>
+<a href="https://thdev7.github.io/Portfolio/tabuada/ex17.html" target="_blank" rel="external">Tabuada com JS</a> <br>
+<a href="https://thdev7.github.io/Portfolio/catalogo/catalogo.html" target="_blank" rel="external">Catalogo</a>
