@@ -1,11 +1,27 @@
 let produtos = [
     // Conjunto (20 slots)
-    { categoria: "Conjunto", nome: "Conjunto Van Cleef", descricao: "Conjunto dourado com trevo preto.", preco: "58,00", imagem: "imagens/conjuntovcpreto.jpg" },
-    { categoria: "Conjunto", nome: "Conjunto Elegante", descricao: "Conjunto dourado .", preco: "349,90", imagem: "conjunto2.jpg" }, 
+    { categoria: "Conjunto", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado com trevo preto.", preco: "58,00", imagem: "imagens/conjuntovcpreto.jpg" },
+    { categoria: "Conjunto", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado madreperóla", preco: "58,00", imagem: "imagens/conjuntovcperola.jpg" },
+     { categoria: "Conjunto", nome: "Conjunto Borboleta Preta", descricao: "Colar com brinco borboleta preta", preco: "27,00", imagem: "imagens/conjuntoborboletapreta.jpg" }, 
+     { categoria: "Conjunto", nome: "Conjunto Coração Azul", descricao: "Colar e brinco azul em acrilíco ", preco: "35,00", imagem: "imagens/conjuntocoracaoazul.jpg" }, 
+     { categoria: "Conjunto", nome: "Conjunto escama de peixe", descricao: "Colar e brinco escama de peixe ", preco: "27,00", imagem: "imagens/conjuntoescama.jpg" }, 
+
+
 
     // Brincos (20 slots)
-    { categoria: "Brinco", nome: "Brinco Elegante", descricao: "Brinco banhado a ouro com pedras.", preco: "89,90", imagem: "brinco1.jpg" },
-    { categoria: "Brinco", nome: "Brinco de Prata", descricao: "Brinco elegante folheado a prata.", preco: "79,90", imagem: "brinco2.jpg" }, 
+    { categoria: "Brinco", nome: "Brinco Estilo Pandora", descricao: "Brinco estilo pandora nas cores azul turquesa e rose", preco: "30,00 cada" , imagem: "imagens/brincopandora.jpg" },
+    { categoria: "Brinco", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincoescama.jpg" },
+    { categoria: "Brinco", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincoolhog.jpg" },
+    { categoria: "Brinco", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincoescama.jpg" },
+    { categoria: "Brinco", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincogeom.jpg" },
+    { categoria: "Brinco", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincocora.jpg" },
+    { categoria: "Brinco", nome: "Cartela Brinco Eu Desejo...", descricao: "Cartela Brinco 5 pares, Eu desejo...", preco: "27,00", imagem: "imagens/brincopareseudesejo.jpg" },
+    { categoria: "Brinco", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos", preco: "20,00", imagem: "imagens/triobrincoestrela.jpg" },
+    { categoria: "Brinco", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos", preco: "20,00", imagem: "imagens/triobrincoperola.jpg" },
+    { categoria: "Brinco", nome: "Brinco Ear Cuff", descricao: "Brinco ear cuff pedraria.", preco: "35,00", imagem: "imagens/earcuffbrinco.jpg" },
+    
+
+
 
     // Colares (20 slots)
     { categoria: "Colar", nome: "Colar de Pérolas", descricao: "Colar sofisticado com pérolas naturais.", preco: "199,90", imagem: "colar1.jpg" },
