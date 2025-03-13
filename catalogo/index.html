@@ -10,11 +10,18 @@
 <body>
     <div class="container">
         <img src="imagens/logo.png" alt="Logo da Loja" class="logo">
-        
 
+        <!-- Barra de pesquisa -->
+        <input type="text" id="barra-pesquisa" placeholder="Pesquise por nome ou descrição..." class="barra-pesquisa">
+
+        <!-- Catálogo de produtos -->
         <div id="catalogo"></div>
     </div>
-    
+
+    <!-- Biblioteca Fuse.js para busca aproximada -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+    <!-- Link para o arquivo JavaScript -->
     <script src="main.js"></script>
 </body>
 </html>

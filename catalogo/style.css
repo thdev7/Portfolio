@@ -13,8 +13,24 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 150px; /* Tamanho fixo para a logo */
+    margin: 0 auto 20px; /* Centraliza a logo e adiciona margem abaixo */
+    display: block; /* Garante que a logo seja tratada como bloco */
+}
+
+.barra-pesquisa {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #F2D0CF;
+    border-radius: 20px;
     margin-bottom: 20px;
+    outline: none;
+}
+
+.barra-pesquisa:focus {
+    border-color: #e67e22;
 }
 
 .categoria-titulo {
@@ -48,10 +64,13 @@ body {
 
 .produto h3 {
     margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
 }
 
 .produto p {
     color: #666;
+    font-size: 0.9em;
 }
 
 .produto .preco {
@@ -69,10 +88,31 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 0.9em;
+}
+
+.produto a:hover {
+    background: #128C7E;
 }
 
 @media (max-width: 768px) {
     .catalogo {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .categoria-titulo {
+        font-size: 1.5em;
+    }
+
+    .produto h3 {
+        font-size: 1em;
+    }
+
+    .produto .preco {
+        font-size: 1em;
+    }
+
+    .produto a {
+        font-size: 0.8em;
     }
 }

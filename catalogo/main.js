@@ -7,8 +7,6 @@ let produtos = [
     { categoria: "Conjuntos", nome: "Conjunto escama de peixe", descricao: "Colar e brinco escama de peixe ", preco: "27,00", imagem: "imagens/conjuntoescama.jpg" }, 
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado. Brinco, colar, e pulseira ", preco: "27,00", imagem: "imagens/conjuntovcdourado.jpg" }, 
 
-
-
     // Brincos (20 slots)
     { categoria: "Brincos", nome: "Brinco Estilo Pandora", descricao: "Brinco estilo pandora nas cores azul turquesa e rose", preco: "30,00 cada" , imagem: "imagens/brincopandora.jpg" },
     { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincoescama.jpg" },
@@ -20,8 +18,6 @@ let produtos = [
     { categoria: "Brincos", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos; concha, cauda de sereia, tartaruga.", preco: "20,00", imagem: "imagens/triobrincoestrela.jpg" },
     { categoria: "Brincos", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos; ponto de luz, coração, pérola.", preco: "20,00", imagem: "imagens/triobrincoperola.jpg" },
     { categoria: "Brincos", nome: "Brinco Ear Cuff", descricao: "Brinco ear cuff pedraria.", preco: "35,00", imagem: "imagens/earcuffbrinco.jpg" },
-
-
 
     // Colares (20 slots)
     { categoria: "Colares", nome: "Colar Triplo", descricao: "Colar Triplo Fundo Do Mar.", preco: "27,00", imagem: "imagens/colartriplobuzio.jpg" },
@@ -38,19 +34,13 @@ let produtos = [
     { categoria: "Colares", nome: "Colar Laminado Borboleta", descricao: "Colar laminado borboleta 3d.", preco: "32,00", imagem: "imagens/colarborboleta.jpg" },
     { categoria: "Colares", nome: "Gargantilha Pedra Goldstone", descricao: "Gargantilha pedra Goldstone Verde.", preco: "32,00", imagem: "imagens/colargoldstone.jpg" },
 
-
-
     // Braceletes (20 slots)
     { categoria: "Braceletes", nome: "Bracelete Luxo", descricao: "Bracelete folheado a prata.", preco: "159,90", imagem: "bracelete1.jpg" },
     { categoria: "Braceletes", nome: "Bracelete Clássico", descricao: "Bracelete dourado elegante.", preco: "179,90", imagem: "bracelete2.jpg" },
 
-
-
     // Pulseiras (20 slots)
     { categoria: "Pulseiras", nome: "Pulseira Delicada", descricao: "Pulseira com detalhes finos.", preco: "129,90", imagem: "pulseira1.jpg" },
     { categoria: "Pulseiras", nome: "Pulseira de Couro", descricao: "Pulseira masculina de couro.", preco: "149,90", imagem: "pulseira2.jpg" },
-
-    
 
     // Anéis (20 slots)
     { categoria: "Anéis", nome: "Anel Clássico", descricao: "Anel com design sofisticado.", preco: "99,90", imagem: "anel1.jpg" },
@@ -59,14 +49,24 @@ let produtos = [
 
 const categorias = ["Conjuntos", "Brincos", "Colares", "Braceletes", "Pulseiras", "Anéis"];
 const catalogo = document.getElementById("catalogo");
+const barraPesquisa = document.getElementById("barra-pesquisa");
 const numeroContato = "+5571997176177";
 
+// Configuração do Fuse.js para busca aproximada
+const opcoesFuse = {
+    keys: ["nome", "descricao"], // Campos onde a busca será feita
+    threshold: 0.3, // Sensibilidade da busca (0 = exato, 1 = mais flexível)
+    includeScore: true, // Inclui a pontuação de similaridade
+};
+
+const fuse = new Fuse(produtos, opcoesFuse);
+
 // Função para exibir os produtos na tela
-function renderizarProdutos() {
+function renderizarProdutos(produtosFiltrados = produtos) {
     catalogo.innerHTML = ""; 
 
     categorias.forEach(categoria => {
-        let produtosCategoria = produtos.filter(produto => produto.categoria === categoria);
+        let produtosCategoria = produtosFiltrados.filter(produto => produto.categoria === categoria);
 
         if (produtosCategoria.length > 0) {
             catalogo.innerHTML += `<h2 class="categoria-titulo">${categoria}</h2><div class="catalogo" id="${categoria}"></div>`;
@@ -88,5 +88,22 @@ function renderizarProdutos() {
     });
 }
 
-// Renderiza os produtos na tela
+// Função para filtrar os produtos com busca aproximada
+function filtrarProdutos(termo) {
+    if (termo === "") {
+        renderizarProdutos(produtos); // Se a busca estiver vazia, mostra todos os produtos
+    } else {
+        const resultados = fuse.search(termo); // Busca aproximada com Fuse.js
+        const produtosFiltrados = resultados.map(resultado => resultado.item); // Extrai os produtos dos resultados
+        renderizarProdutos(produtosFiltrados); // Renderiza os produtos filtrados
+    }
+}
+
+// Evento de input na barra de pesquisa
+barraPesquisa.addEventListener("input", (event) => {
+    const termo = event.target.value.trim(); // Remove espaços em branco
+    filtrarProdutos(termo); // Filtra os produtos conforme o termo digitado
+});
+
+// Renderiza os produtos na tela ao carregar a página
 renderizarProdutos();
