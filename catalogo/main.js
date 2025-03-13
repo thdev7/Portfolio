@@ -1,7 +1,7 @@
 let produtos = [
     // Conjuntos (20 slots)
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado com trevo preto.", preco: "58,00", imagem: "imagens/conjuntovcpreto.jpg" },
-    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado madreperóla", preco: "58,00", imagem: "imagens/conjuntovcperola.jpg" },
+    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado com trevo madreperóla", preco: "58,00", imagem: "imagens/conjuntovcperola.jpg" },
     { categoria: "Conjuntos", nome: "Conjunto Borboleta Preta", descricao: "Colar com brinco borboleta preta", preco: "27,00", imagem: "imagens/conjuntoborboletapreta.jpg" }, 
     { categoria: "Conjuntos", nome: "Conjunto Coração Azul", descricao: "Colar e brinco azul em acrilíco ", preco: "35,00", imagem: "imagens/conjuntocoracaoazul.jpg" }, 
     { categoria: "Conjuntos", nome: "Conjunto escama de peixe", descricao: "Colar e brinco escama de peixe ", preco: "27,00", imagem: "imagens/conjuntoescama.jpg" }, 
