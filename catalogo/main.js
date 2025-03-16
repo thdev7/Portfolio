@@ -72,15 +72,20 @@ const opcoesFuse = {
 const fuse = new Fuse(produtos, opcoesFuse);
 
 // Função para exibir os produtos na tela
-function renderizarProdutos(produtosFiltrados = produtos) {
-    catalogo.innerHTML = ""; 
+function renderizarProdutos(produtosFiltrados = produtos, categoriaPesquisada = null) {
+    catalogo.innerHTML = "";
 
-    categorias.forEach(categoria => {
+    // Se uma categoria específica foi pesquisada, coloque-a no início do array
+    const categoriasExibidas = categoriaPesquisada
+        ? [categoriaPesquisada, ...categorias.filter(cat => cat !== categoriaPesquisada)]
+        : categorias;
+
+    categoriasExibidas.forEach(categoria => {
         let produtosCategoria = produtosFiltrados.filter(produto => produto.categoria === categoria);
 
         if (produtosCategoria.length > 0) {
             catalogo.innerHTML += `<h2 class="categoria-titulo">${categoria}</h2><div class="catalogo" id="${categoria}"></div>`;
-            
+
             const categoriaDiv = document.getElementById(categoria);
 
             produtosCategoria.forEach(produto => {
@@ -98,42 +103,61 @@ function renderizarProdutos(produtosFiltrados = produtos) {
     });
 }
 
-// Função para filtrar os produtos com busca aproximada
+// Função para normalizar o termo de busca (singular/plural, acentos e minúsculas)
+function normalizarTermo(termo) {
+    return termo
+        .toLowerCase() // Converte para minúsculas
+        .normalize("NFD") // Remove acentos
+        .replace(/[\u0300-\u036f]/g, ""); // Remove diacríticos
+}
+
+// Função para verificar se um termo corresponde a uma categoria (singular ou plural)
+function correspondeACategoria(termo, categoria) {
+    const termoNormalizado = normalizarTermo(termo);
+    const categoriaNormalizada = normalizarTermo(categoria);
+
+    // Verifica se o termo corresponde à categoria no singular ou plural
+    return (
+        termoNormalizado === categoriaNormalizada || // Exato (ex.: "anel" → "anel")
+        termoNormalizado + "s" === categoriaNormalizada || // Plural simples (ex.: "brinco" → "brincos")
+        termoNormalizado + "es" === categoriaNormalizada || // Plural com "es" (ex.: "colar" → "colares")
+        termoNormalizado.replace(/l$/, "is") === categoriaNormalizada || // Casos como "anel" → "anéis"
+        termoNormalizado.replace(/co$/, "cos") === categoriaNormalizada || // Casos como "brinco" → "brincos"
+        termoNormalizado.replace(/ar$/, "ares") === categoriaNormalizada // Casos como "colar" → "colares"
+    );
+}
+
 function filtrarProdutos(termo) {
     if (termo === "") {
-        renderizarProdutos(produtos); // Se a busca estiver vazia, mostra todos os produtos
+        renderizarProdutos(produtos);
     } else {
-        const resultados = fuse.search(termo); // Busca aproximada com Fuse.js
-        const produtosFiltrados = resultados.map(resultado => resultado.item); // Extrai os produtos dos resultados
+        const termoNormalizado = normalizarTermo(termo);
+        const resultados = fuse.search(termoNormalizado);
+        const produtosFiltrados = resultados.map(resultado => resultado.item);
 
-        // Verifica se o termo corresponde a uma categoria exata
         const categoriaPesquisada = categorias.find(categoria =>
-            categoria.toLowerCase() === termo.toLowerCase()
+            correspondeACategoria(termo, categoria)
         );
 
-        // Filtra os produtos pela categoria exata, se houver correspondência
         let produtosCategoriaExata = [];
-        let produtosDescricaoOuNome = [];
+        let produtosOutrasCategorias = [];
 
         if (categoriaPesquisada) {
             produtosCategoriaExata = produtosFiltrados.filter(produto =>
-                produto.categoria.toLowerCase() === categoriaPesquisada.toLowerCase()
+                correspondeACategoria(produto.categoria, categoriaPesquisada)
             );
 
-            // Filtra os produtos que contêm o termo na descrição ou no nome, mas não pertencem à categoria exata
-            produtosDescricaoOuNome = produtosFiltrados.filter(produto =>
-                produto.categoria.toLowerCase() !== categoriaPesquisada.toLowerCase() &&
-                (produto.nome.toLowerCase().includes(termo.toLowerCase()) ||
-                 produto.descricao.toLowerCase().includes(termo.toLowerCase()))
+            produtosOutrasCategorias = produtosFiltrados.filter(produto =>
+                !correspondeACategoria(produto.categoria, categoriaPesquisada) &&
+                (normalizarTermo(produto.nome).includes(termoNormalizado) ||
+                    normalizarTermo(produto.descricao).includes(termoNormalizado))
             );
         } else {
-            // Se não houver categoria exata, exibe todos os produtos filtrados
-            produtosDescricaoOuNome = produtosFiltrados;
+            produtosOutrasCategorias = produtosFiltrados;
         }
 
-        // Combina os resultados, priorizando a categoria exata
-        const resultadosFinais = [...produtosCategoriaExata, ...produtosDescricaoOuNome];
-        renderizarProdutos(resultadosFinais);
+        const resultadosFinais = [...produtosCategoriaExata, ...produtosOutrasCategorias];
+        renderizarProdutos(resultadosFinais, categoriaPesquisada); // Passa a categoria pesquisada
     }
 }
 

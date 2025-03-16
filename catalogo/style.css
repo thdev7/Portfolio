@@ -96,7 +96,7 @@ body {
 .catalogo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
+    gap: 40px; /* Espaço entre os itens */
     margin-bottom: 40px;
 }
 
@@ -109,8 +109,8 @@ body {
     transition: background-color 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Alinha o conteúdo verticalmente */
-    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    justify-content: space-between;
+    margin-bottom: 20px; /* Adiciona espaço entre os itens */
 }
 
 .produto img {
@@ -228,13 +228,19 @@ body.modo-noturno .produto a:hover {
     background-color: #0e6e5e;
 }
 
+/* Ajustes para telas menores */
 @media (max-width: 768px) {
     .catalogo {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px; /* Reduz o gap para telas menores */
     }
 
     .categoria-titulo {
         font-size: 1.5em;
+    }
+
+    .produto {
+        margin-bottom: 15px; /* Reduz o espaço entre os itens */
     }
 
     .produto h3 {
@@ -246,6 +252,39 @@ body.modo-noturno .produto a:hover {
     }
 
     .produto a {
+        font-size: 0.8em;
+    }
+}
+
+/* Ajustes específicos para o iPhone X */
+@media (max-width: 375px) {
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr); /* Força 2 colunas */
+        gap: 10px; /* Espaço menor para telas muito pequenas */
+    }
+
+    .produto {
+        margin-bottom: 10px; /* Espaço menor entre os itens */
+    }
+
+    .produto img {
+        height: 150px; /* Ajusta a altura da imagem */
+    }
+
+    .produto h3 {
+        font-size: 1em;
+    }
+
+    .produto p {
+        font-size: 0.8em;
+    }
+
+    .produto .preco {
+        font-size: 1em;
+    }
+
+    .produto a {
+        padding: 8px 10px; /* Reduz o padding do botão */
         font-size: 0.8em;
     }
 }
