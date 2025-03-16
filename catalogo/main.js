@@ -1,8 +1,8 @@
 let produtos = [
     // Conjuntos (20 slots)
-    { categoria: "Conjuntos", nome: "Conjunto", descricao: "Colar com brinco borboleta preta", preco: "27,00", imagem: "imagens/conjuntoborboletapreta.jpg" }, 
-    { categoria: "Conjuntos", nome: "Conjunto", descricao: "Colar e brinco escama de peixe ", preco: "27,00", imagem: "imagens/conjuntoescama.jpg" },
-    { categoria: "Conjuntos", nome: "Conjunto", descricao: "Colar e brinco azul em acrilíco ", preco: "35,00", imagem: "imagens/conjuntocoracaoazul.jpg" }, 
+    { categoria: "Conjuntos", nome: "Conjunto Borboleta", descricao: "Colar com brinco borboleta preta", preco: "27,00", imagem: "imagens/conjuntoborboletapreta.jpg" }, 
+    { categoria: "Conjuntos", nome: "Conjunto Escama", descricao: "Colar e brinco escama de peixe ", preco: "27,00", imagem: "imagens/conjuntoescama.jpg" },
+    { categoria: "Conjuntos", nome: "Conjunto Coração", descricao: "Colar e brinco azul em acrilíco ", preco: "35,00", imagem: "imagens/conjuntocoracaoazul.jpg" }, 
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado com trevo preto.", preco: "50,00", imagem: "imagens/conjuntovcpreto.jpg" },
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado com trevo madreperóla", preco: "50,00", imagem: "imagens/conjuntovcperola.jpg" },
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos. colar e pulseira. ", preco: "67,00", imagem: "imagens/conjuntovcdourado5trevos.jpg" }, 
@@ -11,36 +11,43 @@ let produtos = [
     // Brincos (20 slots)
     { categoria: "Brincos", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos; concha, cauda de sereia, tartaruga.", preco: "20,00", imagem: "imagens/triobrincoestrela.jpg" },
     { categoria: "Brincos", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos; ponto de luz, coração, pérola.", preco: "20,00", imagem: "imagens/triobrincoperola.jpg" },
-    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincoolhog.jpg" },
-    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincoescama.jpg" },
-    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincogeom.jpg" },
-    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares", preco: "27,00" , imagem: "imagens/cartelabrincocora.jpg" },
+    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares, olho grego...", preco: "27,00" , imagem: "imagens/cartelabrincoolhog.jpg" },
+    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares, escama...", preco: "27,00" , imagem: "imagens/cartelabrincoescama.jpg" },
+    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares, triângulo...", preco: "27,00" , imagem: "imagens/cartelabrincogeom.jpg" },
+    { categoria: "Brincos", nome: "Cartela Brinco Semaninha", descricao: "Cartela brinco semaninha, 7 pares, coração robusto...", preco: "27,00" , imagem: "imagens/cartelabrincocora.jpg" },
     { categoria: "Brincos", nome: "Cartela Brinco Eu Desejo...", descricao: "Cartela Brinco 5 pares, Eu desejo...", preco: "27,00", imagem: "imagens/brincopareseudesejo.jpg" },
     { categoria: "Brincos", nome: "Brinco Estilo Pandora", descricao: "Brinco estilo pandora nas cores azul turquesa e rose", preco: "30,00 cada" , imagem: "imagens/brincopandora.jpg" },
     { categoria: "Brincos", nome: "Brinco Ear Cuff", descricao: "Brinco ear cuff pedraria.", preco: "35,00", imagem: "imagens/earcuffbrinco.jpg" },
 
     // Colares (20 slots)
-    { categoria: "Colares", nome: "Colar Triplo", descricao: "Colar Triplo Fundo Do Mar.", preco: "27,00", imagem: "imagens/colartriplobuzio.jpg" },
-    { categoria: "Colares", nome: "Colar Duplo", descricao: "Colar Duplo Sol e Meia Lua.", preco: "27,00", imagem: "imagens/colarduplosol.jpg" },
-    { categoria: "Colares", nome: "Colar único", descricao: "Colar cauda de sereia e escama de peixe.", preco: "27,00", imagem: "imagens/colarcaudas.jpg" },
-    { categoria: "Colares", nome: "Colar Duplo ", descricao: "Colar duplo corações vazados  .", preco: "27,00", imagem: "imagens/colarcoracoes.jpg" },
-    { categoria: "Colares", nome: "Colar duplo", descricao: "Colar duplo pérola e estrela vazada.", preco: "27,00", imagem: "imagens/colarduploestrela.jpg" },
-    { categoria: "Colares", nome: "Colar duplo", descricao: "Colar duplo pérola e meia lua.", preco: "27,00", imagem: "imagens/colarduplolua.jpg" },
-    { categoria: "Colares", nome: "Choker", descricao: "Choker cauda de sereia lisa.", preco: "27,00", imagem: "imagens/choker cauda de sereia lisa.jpg" },
-    { categoria: "Colares", nome: "Choker", descricao: "Choker fundo do mar.", preco: "27,00", imagem: "imagens/cauda de sereia detalhada.jpg" },
-    { categoria: "Colares", nome: "Choker", descricao: "Choker corações pequenos polidos.", preco: "27,00", imagem: "imagens/chokercoraçoes.jpg" },
-    { categoria: "Colares", nome: "Colar duplo", descricao: "Colar duplo ponto de luz e coração.", preco: "27,00", imagem: "imagens/colarduplocoracao.jpg" },
-    { categoria: "Colares", nome: "Gargantilha", descricao: "Gargantilha pedra Goldstone Verde.", preco: "32,00", imagem: "imagens/colargoldstone.jpg" },
-    { categoria: "Colares", nome: "Colar duplo", descricao: "Colar duplo cadeado com textura e chave.", preco: "45,00", imagem: "imagens/colarchaveecadeado.jpg" },
+    { categoria: "Colares", nome: "Colar concha", descricao: "Colar Triplo Fundo Do Mar.", preco: "27,00", imagem: "imagens/colartriplobuzio.jpg" },
+    { categoria: "Colares", nome: "Colar lua", descricao: "Colar Duplo Sol e Meia Lua.", preco: "27,00", imagem: "imagens/colarduplosol.jpg" },
+    { categoria: "Colares", nome: "Colar cauda", descricao: "Colar cauda de sereia e escama de peixe.", preco: "27,00", imagem: "imagens/colarcaudas.jpg" },
+    { categoria: "Colares", nome: "Colar corações ", descricao: "Colar duplo corações vazados  .", preco: "27,00", imagem: "imagens/colarcoracoes.jpg" },
+    { categoria: "Colares", nome: "Colar estrela", descricao: "Colar duplo pérola e estrela vazada.", preco: "27,00", imagem: "imagens/colarduploestrela.jpg" },
+    { categoria: "Colares", nome: "Colar meia lua", descricao: "Colar duplo pérola e meia lua.", preco: "27,00", imagem: "imagens/colarduplolua.jpg" },
+    { categoria: "Colares", nome: "Choker cauda", descricao: "Choker cauda de sereia lisa.", preco: "27,00", imagem: "imagens/choker cauda de sereia lisa.jpg" },
+    { categoria: "Colares", nome: "Choker mar", descricao: "Choker fundo do mar.", preco: "27,00", imagem: "imagens/cauda de sereia detalhada.jpg" },
+    { categoria: "Colares", nome: "Choker corações", descricao: "Choker corações pequenos polidos.", preco: "27,00", imagem: "imagens/chokercoraçoes.jpg" },
+    { categoria: "Colares", nome: "Colar coração", descricao: "Colar duplo ponto de luz e coração.", preco: "27,00", imagem: "imagens/colarduplocoracao.jpg" },
+    { categoria: "Colares", nome: "Gargantilha pedra", descricao: "Gargantilha pedra Goldstone Verde.", preco: "32,00", imagem: "imagens/colargoldstone.jpg" },
+    { categoria: "Colares", nome: "Colar cadeado", descricao: "Colar duplo cadeado com textura e chave.", preco: "45,00", imagem: "imagens/colarchaveecadeado.jpg" },
 
     // Braceletes (20 slots)
     { categoria: "Braceletes", nome: "Bracelete", descricao: "Bracelete coração preto, ótimo para mixes.", preco: "40,00", imagem: "imagens/braceletepreto.jpg" },
     { categoria: "Braceletes", nome: "Bracelete", descricao: "Bracelete prego cravejado com zircônias.", preco: "40,00", imagem: "imagens/prego2.jpg" },
     { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete trevo ou Tiffany&co.", preco: "55,00 cada", imagem: "imagens/braceletetrevo.jpg" },
+    { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete fio duplo.", preco: "30,00", imagem: "imagens/braceletefio.jpg" },
    
     // Pulseiras (20 slots)
-    { categoria: "Pulseiras", nome: "", descricao: "Pulseira montada com berloques.", preco: "65,00", imagem: "imagens/.jpg" },
-    { categoria: "Pulseiras", nome: "Pulseira de Couro", descricao: "Pulseira masculina de couro.", preco: "149,90", imagem: "imagens/pulseira2.jpg" },
+    { categoria: "Pulseiras", nome: "Mix Pulseiras", descricao: "Pulseira laminada fita 2mm ou pulseira baiana 21cm.", preco: "26,00 - 23,00 cada", imagem: "imagens/pulseirabaiana.jpg" },
+    { categoria: "Pulseiras", nome: "Mix Pulseiras", descricao: "Pulseira baiana ou pulseira Tiffany&Co azul turquesa.", preco: "23,00 - 30,00 cada", imagem: "imagens/pulseiratiff.jpg" },
+    { categoria: "Pulseiras", nome: "Mix Pulseiras", descricao: "Pulseira baiana, pulseira Tiffany&Co rosa ou pulseira laminada 2mm.", preco: "23,00 - 30,00 - 26,00 cada", imagem: "imagens/pulseiratiffany.jpg" },
+    { categoria: "Pulseiras", nome: "Pulseiras Van Cleef", descricao: "Pulseira Van Cleef individual, para quem não quer o conjunto de colar e pulseira.", preco: "35,00 cada", imagem: "imagens/pulseiravcn.jpg" },
+    { categoria: "Pulseiras", nome: "Pulseira Coração", descricao: "Pulseira coração com zircônia no círculo .", preco: "23,00", imagem: "imagens/pulseiracoracaoo.jpg" },
+    { categoria: "Pulseiras", nome: "Pulseira Lua", descricao: "Pulseira lua com pedrinhas.", preco: "25,00", imagem: "imagens/pulseiralua.jpg" },
+    { categoria: "Pulseiras", nome: "Pulseira Olho Grego", descricao: "Pulseira dupla olho grego e estrela com bolinhas.", preco: "30,00", imagem: "imagens/olhogrego.jpg" },
+    
 
     // Anéis (20 slots)
     { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel regulável dois triângulos ou anel retângulo.", preco: "15,00 cada", imagem: "imagens/aneldoistriang.jpg" },

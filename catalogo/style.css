@@ -69,15 +69,16 @@ body {
 }
 
 .barra-pesquisa {
-    width: 100%;
+    width: 90%; /* Ajuste a largura conforme necessário */
     max-width: 400px;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #F2D0CF;
     border-radius: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto; /* Centraliza a barra de pesquisa */
     outline: none;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    display: block; /* Garante que a barra de pesquisa seja um elemento de bloco */
 }
 
 .barra-pesquisa:focus {
@@ -254,6 +255,10 @@ body.modo-noturno .produto a:hover {
     .produto a {
         font-size: 0.8em;
     }
+
+    .barra-pesquisa {
+        width: 95%; /* Ajuste a largura para telas menores */
+    }
 }
 
 /* Ajustes específicos para o iPhone X */
@@ -286,5 +291,9 @@ body.modo-noturno .produto a:hover {
     .produto a {
         padding: 8px 10px; /* Reduz o padding do botão */
         font-size: 0.8em;
+    }
+
+    .barra-pesquisa {
+        width: 90%; /* Ajuste a largura para telas muito pequenas */
     }
 }
