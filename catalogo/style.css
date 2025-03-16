@@ -227,3 +227,25 @@ body.modo-noturno .produto a {
 body.modo-noturno .produto a:hover {
     background-color: #0e6e5e;
 }
+
+@media (max-width: 768px) {
+    .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .categoria-titulo {
+        font-size: 1.5em;
+    }
+
+    .produto h3 {
+        font-size: 1em;
+    }
+
+    .produto .preco {
+        font-size: 1em;
+    }
+
+    .produto a {
+        font-size: 0.8em;
+    }
+}
