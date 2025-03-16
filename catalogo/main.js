@@ -1,6 +1,5 @@
 let produtos = [
     // Conjuntos (20 slots)
-
     { categoria: "Conjuntos", nome: "Conjunto", descricao: "Colar com brinco borboleta preta", preco: "27,00", imagem: "imagens/conjuntoborboletapreta.jpg" }, 
     { categoria: "Conjuntos", nome: "Conjunto", descricao: "Colar e brinco escama de peixe ", preco: "27,00", imagem: "imagens/conjuntoescama.jpg" },
     { categoria: "Conjuntos", nome: "Conjunto", descricao: "Colar e brinco azul em acrilíco ", preco: "35,00", imagem: "imagens/conjuntocoracaoazul.jpg" }, 
@@ -8,7 +7,6 @@ let produtos = [
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Colar e brinco dourado com trevo madreperóla", preco: "50,00", imagem: "imagens/conjuntovcperola.jpg" },
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos. colar e pulseira. ", preco: "67,00", imagem: "imagens/conjuntovcdourado5trevos.jpg" }, 
     { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado. Brinco, colar, e pulseira ", preco: "92,00", imagem: "imagens/conjuntovcdourado.jpg" }, 
-
 
     // Brincos (20 slots)
     { categoria: "Brincos", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos; concha, cauda de sereia, tartaruga.", preco: "20,00", imagem: "imagens/triobrincoestrela.jpg" },
@@ -40,8 +38,6 @@ let produtos = [
     { categoria: "Braceletes", nome: "Bracelete", descricao: "Bracelete prego cravejado com zircônias.", preco: "40,00", imagem: "imagens/prego2.jpg" },
     { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete trevo ou Tiffany&co.", preco: "55,00 cada", imagem: "imagens/braceletetrevo.jpg" },
    
-   
-
     // Pulseiras (20 slots)
     { categoria: "Pulseiras", nome: "", descricao: "Pulseira montada com berloques.", preco: "65,00", imagem: "imagens/.jpg" },
     { categoria: "Pulseiras", nome: "Pulseira de Couro", descricao: "Pulseira masculina de couro.", preco: "149,90", imagem: "imagens/pulseira2.jpg" },
@@ -59,9 +55,6 @@ let produtos = [
     { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel cauda de sereia e zircônia, anel palito e bolinha ou anel gota dupla.  ", preco: "18,00 cada", imagem: "imagens/anelgota.jpg" },
     { categoria: "Anéis", nome: "Anel", descricao: "Anel losango único.", preco: "18,00", imagem: "imagens/anellosango.jpg" },
     { categoria: "Anéis", nome: "Anel", descricao: "Anel formato em 'V'. ", preco: "18,00", imagem: "imagens/anelv.jpg" },
-    
-   
-
 ];
 
 const categorias = ["Conjuntos", "Brincos", "Colares", "Braceletes", "Pulseiras", "Anéis"];
@@ -71,7 +64,7 @@ const numeroContato = "+5571997176177";
 
 // Configuração do Fuse.js para busca aproximada
 const opcoesFuse = {
-    keys: ["nome", "descricao"], // Campos onde a busca será feita
+    keys: ["nome", "descricao", "categoria"], // Campos onde a busca será feita
     threshold: 0.3, // Sensibilidade da busca (0 = exato, 1 = mais flexível)
     includeScore: true, // Inclui a pontuação de similaridade
 };
@@ -112,7 +105,35 @@ function filtrarProdutos(termo) {
     } else {
         const resultados = fuse.search(termo); // Busca aproximada com Fuse.js
         const produtosFiltrados = resultados.map(resultado => resultado.item); // Extrai os produtos dos resultados
-        renderizarProdutos(produtosFiltrados); // Renderiza os produtos filtrados
+
+        // Verifica se o termo corresponde a uma categoria exata
+        const categoriaPesquisada = categorias.find(categoria =>
+            categoria.toLowerCase() === termo.toLowerCase()
+        );
+
+        // Filtra os produtos pela categoria exata, se houver correspondência
+        let produtosCategoriaExata = [];
+        let produtosDescricaoOuNome = [];
+
+        if (categoriaPesquisada) {
+            produtosCategoriaExata = produtosFiltrados.filter(produto =>
+                produto.categoria.toLowerCase() === categoriaPesquisada.toLowerCase()
+            );
+
+            // Filtra os produtos que contêm o termo na descrição ou no nome, mas não pertencem à categoria exata
+            produtosDescricaoOuNome = produtosFiltrados.filter(produto =>
+                produto.categoria.toLowerCase() !== categoriaPesquisada.toLowerCase() &&
+                (produto.nome.toLowerCase().includes(termo.toLowerCase()) ||
+                 produto.descricao.toLowerCase().includes(termo.toLowerCase()))
+            );
+        } else {
+            // Se não houver categoria exata, exibe todos os produtos filtrados
+            produtosDescricaoOuNome = produtosFiltrados;
+        }
+
+        // Combina os resultados, priorizando a categoria exata
+        const resultadosFinais = [...produtosCategoriaExata, ...produtosDescricaoOuNome];
+        renderizarProdutos(resultadosFinais);
     }
 }
 
