@@ -2,13 +2,12 @@ let produtos = [
     // Conjuntos (20 slots)
     { categoria: "Conjuntos", nome: "Conjunto Borboleta", descricao: "Colar com brinco borboleta preta", preco: "27,00", imagem: "imagens/conjuntoborboletapreta.jpg" }, 
     { categoria: "Conjuntos", nome: "Conjunto Escama", descricao: "Colar e brinco escama de peixe ", preco: "27,00", imagem: "imagens/conjuntoescama.jpg" },
-    { categoria: "Conjuntos", nome: "Conjunto Coração", descricao: "Colar e brinco azul em acrilíco ", preco: "35,00", imagem: "imagens/conjuntocoracaoazul.jpg" }, 
-    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 1 trevo preto, colar e brinco.", preco: "45,00 PROMOÇÃO", imagem: "imagens/conjuntovcpreto.jpg" },
-    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef prata, com 5 trevos preto, colar e pulseira.", preco: "58,00 PROMOÇÃO", imagem: "imagens/conjuntovcprata.jpg" },
-    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos preto, colar e pulseira. ", preco: "58,00 PROMOÇÃO.", imagem: "imagens/conjuntovcdourado5trevos.jpg" }, 
-    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos em madrepérola, colar e pulseira ", preco: "58,00 PROMOÇÃO", imagem: "imagens/vcbranco.jpg" }, 
-    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos verde, colar e pulseira ", preco: "58,00 PROMOÇÃO", imagem: "imagens/conjuntovcverde.jpg" },  
-    { categoria: "Conjuntos", nome: "Conjunto Circulo romano", descricao: "Conjunto colar circulo romano e colar laminado ", preco: "48,00", imagem: "imagens/conjuntocirculo.jpg" },  
+    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 1 trevo preto, colar e brinco.", preco: "55,00", imagem: "imagens/conjuntovcpreto.jpg" },
+    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef prata, com 5 trevos preto, colar e pulseira.", preco: "67,00", imagem: "imagens/conjuntovcprata.jpg" },
+    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos preto, colar e pulseira. ", preco: "67,00", imagem: "imagens/conjuntovcdourado5trevos.jpg" }, 
+    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos em madrepérola, colar e pulseira ", preco: "67,00", imagem: "imagens/vcbranco.jpg" }, 
+    { categoria: "Conjuntos", nome: "Conjunto Van Cleef", descricao: "Conjunto Van Cleef dourado, com 5 trevos verde, colar e pulseira ", preco: "67,00", imagem: "imagens/conjuntovcverde.jpg" },  
+    { categoria: "Conjuntos", nome: "Conjunto Circulo romano", descricao: "Conjunto colar circulo romano e colar laminado ", preco: "55,00", imagem: "imagens/conjuntocirculo.jpg" },  
 
     // Brincos (20 slots)
     { categoria: "Brincos", nome: "Trio Brinco", descricao: "Cartela Trio De Brincos; concha, cauda de sereia, tartaruga.", preco: "20,00", imagem: "imagens/triobrincoestrela.jpg" },
@@ -33,7 +32,6 @@ let produtos = [
     { categoria: "Colares", nome: "Gargantilha pedra", descricao: "Gargantilha pedra Goldstone Verde.", preco: "32,00", imagem: "imagens/colargoldstone.jpg" },
     { categoria: "Colares", nome: "Colar cadeado", descricao: "Colar duplo cadeado com textura e chave.", preco: "45,00", imagem: "imagens/colarchaveecadeado.jpg" },
     { categoria: "Colares", nome: "Colar Van Cleef", descricao: "Colar Van Cleef dourado.", preco: "40,00", imagem: "imagens/conjuntovcdourado.jpg" },
-    { categoria: "Colares", nome: "Colar Rosa em 3d", descricao: "Colar Rosa em 3D.", preco: "30,00", imagem: "imagens/colarrosa3d.jpg" },
     
 
     // Braceletes (20 slots)
@@ -41,15 +39,15 @@ let produtos = [
     { categoria: "Braceletes", nome: "Bracelete", descricao: "Bracelete prego cravejado com zircônias.", preco: "40,00", imagem: "imagens/prego2.jpg" },
     { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete trevo ou Tiffany&co.", preco: "55,00 cada", imagem: "imagens/braceletetrevo.jpg" },
     { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete fio duplo.", preco: "30,00", imagem: "imagens/braceletefio.jpg" },
-    { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete Cartier.", preco: "38,00 PROMOÇÃO", imagem: "imagens/mixbracelete.jpg" },
-    { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete Versace.", preco: "38,00 PROMOÇÃO", imagem: "imagens/MIXVERSACE.jpg" },
+    { categoria: "Braceletes", nome: "ESGOTADO ", descricao: " Bracelete Cartier.", preco: "38,00 PROMOÇÃO", imagem: "imagens/mixbracelete.jpg" },
+    { categoria: "Braceletes", nome: "Bracelete ", descricao: " Bracelete Versace.", preco: "45,00", imagem: "imagens/MIXVERSACE.jpg" },
    
     // Pulseiras (20 slots)
     { categoria: "Pulseiras", nome: "Mix Pulseiras", descricao: "Pulseira laminada fita 2mm ou pulseira baiana 21cm.", preco: "26,00 - 23,00 cada", imagem: "imagens/pulseirabaiana.jpg" },
     { categoria: "Pulseiras", nome: "Mix Pulseiras", descricao: "Pulseira baiana ou pulseira Tiffany&Co azul turquesa.", preco: "23,00 - 30,00 cada", imagem: "imagens/pulseiratiff.jpg" },
     { categoria: "Pulseiras", nome: "Mix Pulseiras", descricao: "Pulseira baiana, pulseira Tiffany&Co rosa ou pulseira laminada 2mm.", preco: "23,00 - 30,00 - 26,00 cada", imagem: "imagens/pulseiratiffany.jpg" },
     { categoria: "Pulseiras", nome: "Pulseiras Van Cleef", descricao: "Pulseira Van Cleef individual, para quem não quer o conjunto de colar e pulseira.", preco: "35,00 cada", imagem: "imagens/pulseirasvc.jpg" },
-    { categoria: "Pulseiras", nome: "Pulseiras Van Cleef", descricao: "Pulseira montada com berloques.", preco: "55,00 PROMOÇÃO", imagem: "imagens/pulseiramontadaber.jpg" },
+    { categoria: "Pulseiras", nome: "ESGOTADA", descricao: "Pulseira montada com berloques.", preco: "55,00 PROMOÇÃO", imagem: "imagens/pulseiramontadaber.jpg" },
     { categoria: "Pulseiras", nome: "Pulseira Coração", descricao: "Pulseira coração com zircônia no círculo .", preco: "23,00", imagem: "imagens/pulseiracoracaoo.jpg" },
     { categoria: "Pulseiras", nome: "Pulseira Lua", descricao: "Pulseira lua com pedrinhas.", preco: "25,00", imagem: "imagens/pulseiralua.jpg" },
     { categoria: "Pulseiras", nome: "Pulseira Olho Grego", descricao: "Pulseira dupla olho grego e estrela com bolinhas.", preco: "30,00", imagem: "imagens/olhogrego.jpg" },
@@ -65,7 +63,7 @@ let produtos = [
     { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel ondulado ou anel estrela única.", preco: "18,00 cada", imagem: "imagens/anelonduladoo.jpg" },
     { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel duplo borboleta e zircônia ou anel regulável dois palitos.  ", preco: "18,00 cada", imagem: "imagens/anelduplo2.jpg" },
     { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel duplo lacinho e zircônia  ", preco: "18,00", imagem: "imagens/anellaco.jpg" },
-    { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel cauda de sereia e zircônia, anel palito e bolinha ou anel gota dupla.  ", preco: "18,00 cada", imagem: "imagens/anelgota.jpg" },
+    { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel palito e bolinha ou anel gota dupla.  ", preco: "18,00 cada", imagem: "imagens/anelgota.jpg" },
     { categoria: "Anéis", nome: "Mix De Anéis", descricao: "Anel folhado, anel duplo, anel infinito  ", preco: "15,00 cada. PROMOÇÃO ", imagem: "imagens/mixaneisshein.jpg" },
     { categoria: "Anéis", nome: "Anel", descricao: "Anel losango único.", preco: "18,00", imagem: "imagens/anellosango.jpg" },
     { categoria: "Anéis", nome: "Anel", descricao: "Anel formato em 'V'. ", preco: "18,00", imagem: "imagens/anelv.jpg" },
