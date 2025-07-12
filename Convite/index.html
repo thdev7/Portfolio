@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Festa do Davi!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: #333;
+      padding: 30px;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .balao {
+      font-size: 3em;
+      animation: flutuar 3s ease-in-out infinite;
+    }
+
+    @keyframes flutuar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .botao,
+    #btnReceberConvite {
+      background: #ff69b4;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .botao:hover,
+    #btnReceberConvite:hover {
+      background: #ff85c1;
+    }
+
+    #convite {
+      display: none;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <button id="btnReceberConvite">🎉 Receber Convite</button>
+
+  <audio id="musica" loop>
+    <source src="parabens.mp3.mpeg" type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div id="convite">
+    <div class="balao">🎈🎈🎈</div>
+    <h1>Você está convidado!</h1>
+    <p>
+      É aniversário do <strong>Davi</strong>! E a sua presença vai deixar tudo ainda
+      mais especial! 🥳
+    </p>
+    <p>
+      <strong>📅 Data:</strong> 11 de Julho<br />
+      <strong>🕒 Horário:</strong> 18h<br />
+      <strong>📍 Local:</strong> A Combinar
+    </p>
+
+    <button class="botao" onclick="alert('Oba! Te esperamos lá! 😄')">
+      Confirmar Presença
+    </button>
+  </div>
+
+  <script>
+    const btn = document.getElementById("btnReceberConvite");
+    const convite = document.getElementById("convite");
+    const musica = document.getElementById("musica");
+
+    btn.addEventListener("click", () => {
+      convite.style.display = "block";
+      musica.play();
+      btn.style.display = "none";
+    });
+  </script>
+</body>
+</html>
