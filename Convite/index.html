@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Festa do Davi!</title>
   <style>
     body {
@@ -9,8 +9,10 @@
       font-family: 'Arial', sans-serif;
       text-align: center;
       color: #333;
-      padding: 30px;
+      padding: 5vw;
       animation: fadeIn 2s ease;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     @keyframes fadeIn {
@@ -19,16 +21,16 @@
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 6vw;
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 4vw;
     }
 
     .balao {
-      font-size: 3em;
+      font-size: 10vw;
       animation: flutuar 3s ease-in-out infinite;
     }
 
@@ -41,11 +43,11 @@
     #btnReceberConvite {
       background: #ff69b4;
       color: white;
-      padding: 15px 25px;
+      padding: 3vw 5vw;
       border: none;
       border-radius: 8px;
-      font-size: 1em;
-      margin-top: 20px;
+      font-size: 4vw;
+      margin-top: 5vw;
       cursor: pointer;
       transition: background 0.3s ease;
     }
@@ -57,7 +59,16 @@
 
     #convite {
       display: none;
-      margin-top: 30px;
+      margin-top: 5vw;
+    }
+
+    /* Responsivo para telas maiores */
+    @media (min-width: 768px) {
+      h1 { font-size: 2.5em; }
+      p { font-size: 1.2em; }
+      .botao,
+      #btnReceberConvite { font-size: 1em; padding: 15px 25px; }
+      .balao { font-size: 3em; }
     }
   </style>
 </head>
