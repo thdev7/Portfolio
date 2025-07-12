@@ -1,18 +1,26 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Festa do Davi!</title>
   <style>
-    body {
-      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      color: #333;
-      padding: 5vw;
-      animation: fadeIn 2s ease;
-      max-width: 100%;
+    /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      text-align: center;
+      padding: 5vw;
+      overflow-x: hidden;
     }
 
     @keyframes fadeIn {
@@ -20,13 +28,18 @@
       to { opacity: 1; }
     }
 
+    body {
+      animation: fadeIn 2s ease;
+    }
+
     h1 {
       font-size: 6vw;
-      margin-bottom: 10px;
+      margin: 4vw 0 2vw;
     }
 
     p {
-      font-size: 4vw;
+      font-size: 4.5vw;
+      margin-bottom: 3vw;
     }
 
     .balao {
@@ -39,21 +52,19 @@
       50% { transform: translateY(-15px); }
     }
 
-    .botao,
-    #btnReceberConvite {
+    button {
       background: #ff69b4;
       color: white;
-      padding: 3vw 5vw;
+      padding: 4vw 6vw;
       border: none;
       border-radius: 8px;
-      font-size: 4vw;
-      margin-top: 5vw;
+      font-size: 4.5vw;
       cursor: pointer;
       transition: background 0.3s ease;
+      margin-top: 5vw;
     }
 
-    .botao:hover,
-    #btnReceberConvite:hover {
+    button:hover {
       background: #ff85c1;
     }
 
@@ -62,17 +73,52 @@
       margin-top: 5vw;
     }
 
-    /* Responsivo para telas maiores */
+    #mensagemConfirmacao {
+      font-size: 6vw;
+      color: #ff1493;
+      font-weight: bold;
+      display: none;
+      margin-top: 4vw;
+      animation: aparecerZoom 0.8s ease forwards;
+    }
+
+    @keyframes aparecerZoom {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+
+    .balao-flutuante {
+      position: fixed;
+      bottom: 0;
+      font-size: 2em;
+      animation: subirBalao 4s linear forwards;
+      z-index: 999;
+      pointer-events: none;
+      opacity: 0.9;
+    }
+
+    @keyframes subirBalao {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+      }
+    }
+
     @media (min-width: 768px) {
       h1 { font-size: 2.5em; }
       p { font-size: 1.2em; }
-      .botao,
-      #btnReceberConvite { font-size: 1em; padding: 15px 25px; }
+      button { font-size: 1em; padding: 15px 25px; }
       .balao { font-size: 3em; }
+      #mensagemConfirmacao { font-size: 2em; }
     }
   </style>
 </head>
 <body>
+
   <button id="btnReceberConvite">🎉 Receber Convite</button>
 
   <audio id="musica" loop>
@@ -93,21 +139,55 @@
       <strong>📍 Local:</strong> A Combinar
     </p>
 
-    <button class="botao" onclick="alert('Oba! Te esperamos lá! 😄')">
-      Confirmar Presença
-    </button>
+    <button id="confirmarBtn">Confirmar Presença</button>
+    <div id="mensagemConfirmacao">🎉 Presença Confirmada! 🎉</div>
   </div>
 
   <script>
     const btn = document.getElementById("btnReceberConvite");
     const convite = document.getElementById("convite");
     const musica = document.getElementById("musica");
+    const confirmarBtn = document.getElementById("confirmarBtn");
+    const mensagem = document.getElementById("mensagemConfirmacao");
 
     btn.addEventListener("click", () => {
       convite.style.display = "block";
-      musica.play();
+      musica.play().catch(() => {
+        console.log("O navegador bloqueou o autoplay.");
+      });
       btn.style.display = "none";
     });
+
+    confirmarBtn.addEventListener("click", () => {
+      mensagem.style.display = "block";
+      mensagem.style.animation = "aparecerZoom 0.5s ease";
+
+      for (let i = 0; i < 20; i++) {
+        criarBalao(i * 150); // espaça os balões no tempo
+      }
+
+      setTimeout(() => {
+        mensagem.style.display = "none";
+      }, 7000);
+    });
+
+    function criarBalao(delay) {
+      setTimeout(() => {
+        const balao = document.createElement("div");
+        balao.classList.add("balao-flutuante");
+        balao.innerText = "🎈";
+        balao.style.left = `${Math.random() * 90 + 2}vw`;
+        balao.style.fontSize = `${Math.random() * 0.5 + 1.5}em`;
+        document.body.appendChild(balao);
+
+        setTimeout(() => {
+          balao.remove();
+        }, 7000);
+      }, delay);
+    }
   </script>
+
 </body>
 </html>
+
+
