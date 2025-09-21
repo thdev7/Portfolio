@@ -1,7 +1,7 @@
 /* Estilos padrão (modo claro) */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #ff9d2ca4;
     color: #333;
     margin: 0;
     padding: 0;
@@ -149,12 +149,30 @@ body {
     transition: color 0.3s;
 }
 
+
+.pata {
+
+    position: relative;
+    top: -180px;
+    right: 500px;
+    width: 200px;
+
+}
+
+.pata2 {
+    position: relative;
+    top: 0px;
+    right: 500px;
+    width: 200px;
+}
+
+
 .produto a {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background: #128C7E;
-    color: white;
+    background: #e26e02;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
