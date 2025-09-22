@@ -1,9 +1,9 @@
 let produtos = [
 
     // RAÇÕES GALINHA
-    { categoria: "Rações Galinha", nome: "Golden Special Adultos", descricao: "Ração premium para cães adultos - 15kg", preco: "145,00", imagem: "imagens/golden-cao.jpg" },
-    { categoria: "Rações Galinha", nome: "Premier Filhotes", descricao: "Ração para cães filhotes raças médias - 10kg", preco: "189,00", imagem: "imagens/premier-filhote.jpg" },
-    { categoria: "Rações Galinha", nome: "Pedigree Adultos", descricao: "Ração para cães adultos sabor carne - 10,1kg", preco: "119,00", imagem: "imagens/pedigree-adulto.jpg" },
+    { categoria: "Rações Galinha", nome: "Postura", descricao: "Ração para galinha postura - 15kg", preco: "145,00", imagem: "imagens/golden-cao.jpg" },
+    { categoria: "Rações Galinha", nome: "Crescimento", descricao: "Ração para galinha postura - 10kg", preco: "189,00", imagem: "imagens/premier-filhote.jpg" },
+    { categoria: "Rações Galinha", nome: "Engorda", descricao: "Ração para galinha postura- 10,1kg", imagem: "imagens/pedigree-adulto.jpg" },
 
     // RAÇÕES CÃES
     { categoria: "Rações Cães", nome: "Golden Special Adultos", descricao: "Ração premium para cães adultos - 15kg", preco: "145,00", imagem: "imagens/golden-cao.jpg" },
@@ -15,6 +15,11 @@ let produtos = [
     { categoria: "Rações Gatos", nome: "Whiskas Adulto Frango", descricao: "Ração seca para gatos adultos sabor frango - 10,1kg", preco: "112,00", imagem: "imagens/whiskas-frango.jpg" },
     { categoria: "Rações Gatos", nome: "Golden Castrados", descricao: "Ração premium gatos castrados - 10kg", preco: "155,00", imagem: "imagens/golden-gato.jpg" },
     { categoria: "Rações Gatos", nome: "Premier Filhotes", descricao: "Ração super premium gatos filhotes - 7,5kg", preco: "169,00", imagem: "imagens/premier-gato.jpg" },
+
+     // MEDICAMENTOS
+    { categoria: "Medicamentos", nome: "Whiskas Adulto Frango", descricao: "Ração seca para gatos adultos sabor frango - 10,1kg", preco: "112,00", imagem: "imagens/whiskas-frango.jpg" },
+    { categoria: "Medicamentos", nome: "Golden Castrados", descricao: "Ração premium gatos castrados - 10kg", preco: "155,00", imagem: "imagens/golden-gato.jpg" },
+    { categoria: "Medicamentos", nome: "Premier Filhotes", descricao: "Ração super premium gatos filhotes - 7,5kg", preco: "169,00", imagem: "imagens/premier-gato.jpg" },
 
     // PETISCOS & OSSINHOS
     { categoria: "Petiscos", nome: "Doguitos Bifinhos", descricao: "Petisco sabor carne para cães - 65g", preco: "8,90", imagem: "imagens/doguitos.jpg" },
@@ -41,7 +46,7 @@ let produtos = [
     { categoria: "Utensílios domésticos", nome: "Vassouras", descricao: "Ração para cães adultos sabor carne - 10,1kg", preco: "119,00", imagem: "imagens/pedigree-adulto.jpg" },
 ];
 
-const categorias = ["Rações Galinha", "Rações Cães", "Rações Gatos", "Petiscos", "Brinquedos", "Acessórios", "Higiene", "Utensílios domésticos"];
+const categorias = ["Rações Galinha", "Rações Cães", "Rações Gatos","Medicamentos", "Petiscos", "Brinquedos", "Acessórios", "Higiene", "Utensílios domésticos"];
 const catalogo = document.getElementById("catalogo");
 const barraPesquisa = document.getElementById("barra-pesquisa");
 const numeroContato = "+5571997176177"; // WhatsApp
@@ -77,7 +82,6 @@ function renderizarProdutos(produtosFiltrados = produtos, categoriaPesquisada = 
                         <img src="${produto.imagem}" alt="${produto.nome}">
                         <h3>${produto.nome}</h3>
                         <p>${produto.descricao}</p>
-                        <p class="preco">R$ ${produto.preco}</p>
                         <a href="https://api.whatsapp.com/send?phone=${numeroContato}&text=Olá, tenho interesse em ${produto.nome} - ${produto.descricao}" target="_blank">Pedir via WhatsApp</a>
                     </div>
                 `;
