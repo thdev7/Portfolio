@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Alguns projetos feitos por mim.<br>\r HTML CSS JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thdev7/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thdev7/Portfolio/issues"
+  },
+  "homepage": "https://github.com/thdev7/Portfolio#readme"
+}
